@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+    <form method="post">
+        <h4>Nombre 1:</h4>
+        <input type="text" name="nombre1" value="{{nombre1}}">
+        <h4>Nombre 2:</h4>
+        <input type="text" name="nombre2" value="{{nombre2}}">
+        <h4>Nombre 3:</h4>
+        <input type="text" name="nombre3" value="{{nombre3}}">
+        <br><br>
+        <button type="submit">Enviar</button>
+        <br>
+        {% if nombre_mayor is defined %}
+            <p>El nombre con mayor cantidad de caracteres es: {{nombre_mayor}}</p>
+            <p>El nombre tiene: {{cant_letras}} caracteres</p>
+        {% endif %}
+    </form>
+
+
+
+</body>
+</html>
